@@ -1,8 +1,8 @@
 # STabLayout
 >>自定义tablayout  选中字体变大 右上角  添加数量
 ## Demo
-![](https://github.com/androidSongMeng/StreamList/raw/master/1.png)
-![](https://github.com/androidSongMeng/StreamList/raw/master/2.png)
+![](https://github.com/androidSongMeng/STabLayout/raw/master/1.png)
+
 
 [![](https://jitpack.io/v/androidSongMeng/StreamList.svg)](https://jitpack.io/#androidSongMeng/StreamList)
 
