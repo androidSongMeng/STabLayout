@@ -56,6 +56,12 @@ public class STabLayout extends HorizontalScrollView implements ViewPager.OnPage
 
     private int height;
 
+    private OnPagerChangeListener onPagerChangeListener;
+
+    public void setOnPagerChangeListener(OnPagerChangeListener onPagerChangeListener) {
+        this.onPagerChangeListener = onPagerChangeListener;
+    }
+
     public STabLayout(Context context) {
         super(context);
     }
@@ -123,11 +129,16 @@ public class STabLayout extends HorizontalScrollView implements ViewPager.OnPage
 
     @Override
     public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-
+        if (onPagerChangeListener != null) {
+            onPagerChangeListener.onPageScrolled(position, positionOffset, positionOffsetPixels);
+        }
     }
 
     @Override
     public void onPageSelected(int position) {
+        if (onPagerChangeListener != null) {
+            onPagerChangeListener.onPageSelected(position);
+        }
         reSetTextColor(position);
 
         if (builder.getTextSize() != builder.getSelectTextSize()) {
@@ -168,7 +179,9 @@ public class STabLayout extends HorizontalScrollView implements ViewPager.OnPage
 
     @Override
     public void onPageScrollStateChanged(int state) {
-
+        if (onPagerChangeListener != null) {
+            onPagerChangeListener.onPageScrollStateChanged(state);
+        }
     }
 
     @Override
