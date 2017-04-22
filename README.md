@@ -20,7 +20,7 @@
 #### Step 2. Add the dependency
 ```java
   dependencies {
-	        compile 'com.github.androidSongMeng:STabLayout:1.0'
+	        compile 'com.github.androidSongMeng:STabLayout:1.1'
 	}
 ```
 ### Step3
